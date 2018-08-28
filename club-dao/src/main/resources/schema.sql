@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS club;
+
+CREATE DATABASE club
+  DEFAULT CHARACTER SET utf8
+  COLLATE utf8_general_ci;
+
+USE club;
+
