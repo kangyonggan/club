@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS video;
+
+CREATE DATABASE video
+  DEFAULT CHARACTER SET utf8
+  COLLATE utf8_general_ci;
+
+USE video;
+

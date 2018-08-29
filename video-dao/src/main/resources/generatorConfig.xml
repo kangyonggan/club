@@ -19,12 +19,12 @@
         <plugin type="com.kangyonggan.common.mybatis.LombokPlugin"/>
 
         <!--jdbc driver-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/club"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/video"
                         userId="root" password="123456"/>
 
         <!--TableName.java-->
         <javaModelGenerator targetPackage="vip.crazykart.model"
-                            targetProject="../club-model/src/main/java">
+                            targetProject="../video-model/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>

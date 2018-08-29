@@ -3,16 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>club</artifactId>
+        <artifactId>video</artifactId>
         <groupId>vip.crazykart</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>club-web</artifactId>
+    <artifactId>video-web</artifactId>
 
-    <name>Crazy Kart Club Web</name>
-    <description>赛车俱乐部</description>
+    <name>Crazy Kart Video Web</name>
+    <description>展现层</description>
 
     <build>
         <plugins>
@@ -39,7 +39,7 @@
         <!--project-->
         <dependency>
             <groupId>vip.crazykart</groupId>
-            <artifactId>club-biz</artifactId>
+            <artifactId>video-biz</artifactId>
         </dependency>
 
         <!--spring-->

@@ -5,18 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>vip.crazykart</groupId>
-    <artifactId>club</artifactId>
+    <artifactId>video</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Crazy Kart Club</name>
-    <description>疯狂赛车俱乐部</description>
+    <name>Crazy Kart Video</name>
+    <description>疯狂赛车视频</description>
 
     <modules>
-        <module>club-model</module>
-        <module>club-dao</module>
-        <module>club-biz</module>
-        <module>club-web</module>
+        <module>video-model</module>
+        <module>video-dao</module>
+        <module>video-biz</module>
+        <module>video-web</module>
     </modules>
 
     <parent>
@@ -110,17 +110,17 @@
             <!--project-->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>club-biz</artifactId>
+                <artifactId>video-biz</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>club-dao</artifactId>
+                <artifactId>video-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>club-model</artifactId>
+                <artifactId>video-model</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
