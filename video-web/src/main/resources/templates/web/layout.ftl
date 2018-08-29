@@ -10,17 +10,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
     <link rel="stylesheet" href="${ctx}/app/css/app.css"/>
-    <script src="${ctx}/libs/jquery/jquery-1.9.1.min.js"></script>
+    <script src="${ctx}/libs/jquery/jquery-1.8.3.min.js"></script>
     <script>var ctx = '${ctx}';</script>
 <@block name="style"/>
 </head>
 
 <body>
 
-<div class="container">
+<div class="layout-container">
 <#include "navbar.ftl"/>
     <div id="main" class="content">
-    <@block name="main"/>
+        <ul class="breadcrumbs">
+            <span>您当前的位置：</span>
+            <li>
+                <a href="${ctx}/">${appName}</a>
+            </li>
+        <@block name="breadcrumbs"/>
+        </ul>
+        <div class="main-container">
+        <@block name="main"/>
+        </div>
     </div>
     <div class="empty"></div>
 </div>

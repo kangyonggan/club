@@ -2,17 +2,32 @@
     <div class="content">
         <a class="appName" href="${ctx}/">${appName}</a>
         <ul>
-            <li class="active">
+            <li>
                 <a href="${ctx}/">首页</a>
             </li>
             <li>
-                <a href="${ctx}/news">新手教学</a>
+                <a href="${ctx}/teach">教学视频</a>
             </li>
             <li>
-                <a href="${ctx}/video">赛道极限</a>
+                <a href="${ctx}/limit">极限视频</a>
             </li>
             <li>
-                <a href="${ctx}/video">车辆极限</a>
+                <a href="${ctx}/match">比赛视频</a>
+            </li>
+            <li>
+                <a href="${ctx}/bug">BUG视频</a>
+            </li>
+            <li>
+                <a href="${ctx}/funny">搞笑视频</a>
+            </li>
+            <li>
+                <a href="${ctx}/other">综合视频</a>
+            </li>
+            <li>
+                <a href="${ctx}/upload">上传视频</a>
+            </li>
+            <li>
+                <a href="${ctx}/advice">意见建议</a>
             </li>
         </ul>
     </div>
