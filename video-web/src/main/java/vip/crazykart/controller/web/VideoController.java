@@ -3,6 +3,7 @@ package vip.crazykart.controller.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import vip.crazykart.controller.BaseController;
@@ -32,7 +33,7 @@ public class VideoController extends BaseController {
      * @param model
      * @return
      */
-    @RequestMapping("{id:[\\d]+}")
+    @GetMapping("{id:[\\d]+}")
     public String detail(@PathVariable("id") Long id, Model model) {
         Video video = videoService.findVideoByVideoId(id);
         Dict dict = dictService.findDictByDictTypeAndCode("VIDEO_TYPE", video.getType());
@@ -40,6 +41,16 @@ public class VideoController extends BaseController {
         model.addAttribute("video", video);
         model.addAttribute("currDict", dict);
         return "web/video/detail";
+    }
+
+    /**
+     * 上传界面
+     *
+     * @return
+     */
+    @GetMapping("upload")
+    public String upload() {
+        return "web/video/upload";
     }
 
 }

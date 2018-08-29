@@ -18,13 +18,15 @@
 <@override name="script">
 <script src="${ctx}/libs/Dvideo/js/Dvideo.js"></script>
 <script>
-    new Dvideo ({
-        ele: '#video',
-        title: '${title}',
-        width: '1200px',
-        height: '600px',
-        src: '${ctx}/${video.src}',
-        autoplay: true
+    $(function () {
+        new Dvideo ({
+            ele: '#video',
+            title: '${title}',
+            width: '1200px',
+            height: '600px',
+            src: '${ctx}/${video.src}',
+            autoplay: true
+        })
     })
 </script>
 </@override>
