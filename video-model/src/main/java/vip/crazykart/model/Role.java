@@ -1,0 +1,55 @@
+package vip.crazykart.model;
+
+import com.github.ofofs.jca.annotation.Serial;
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
+
+/**
+ * @author kangyonggan
+ * @since 8/8/18
+ */
+@Table(name = "tb_role")
+@Data
+@Serial
+public class Role {
+    /**
+     * 主键, 自增
+     */
+    @Id
+    @Column(name = "role_id")
+    private Long roleId;
+
+    /**
+     * 角色代码
+     */
+    @Column(name = "role_code")
+    private String roleCode;
+
+    /**
+     * 角色名称
+     */
+    @Column(name = "role_name")
+    private String roleName;
+
+    /**
+     * 逻辑删除:{0:未删除, 1:已删除}
+     */
+    @Column(name = "is_deleted")
+    private Byte isDeleted;
+
+    /**
+     * 创建时间
+     */
+    @Column(name = "created_time")
+    private Date createdTime;
+
+    /**
+     * 更新时间
+     */
+    @Column(name = "updated_time")
+    private Date updatedTime;
+}

@@ -8,6 +8,8 @@ import freemarker.template.TemplateModelException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import vip.crazykart.freemarker.DictTag;
+import vip.crazykart.freemarker.EnumTag;
 
 import javax.annotation.PostConstruct;
 
@@ -24,13 +26,22 @@ public class FreemarkerConfigure {
     @Value("${app.name}")
     private String appName;
 
+    @Autowired
+    private DictTag dictTag;
+
+    @Autowired
+    private EnumTag enumTag;
+
     @PostConstruct
     public void setSharedVariable() throws TemplateModelException {
         configuration.setSharedVariable("block", new BlockDirective());
         configuration.setSharedVariable("override", new OverrideDirective());
         configuration.setSharedVariable("extends", new ExtendsDirective());
         configuration.setSharedVariable("super", new SuperDirective());
+
         configuration.setSharedVariable("appName", appName);
+        configuration.setSharedVariable("dict", dictTag);
+        configuration.setSharedVariable("enum", enumTag);
     }
 
 }
