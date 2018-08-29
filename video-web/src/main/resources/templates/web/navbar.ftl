@@ -7,7 +7,7 @@
                 <a href="${ctx}/">首页</a>
             </li>
         <#list videoTypes as videoType>
-            <li>
+            <li <#if currDict?? && currDict.dictCode==videoType.dictCode>class="active"</#if>>
                 <a href="${ctx}/video/type/${videoType.dictCode}">${videoType.value}</a>
             </li>
         </#list>

@@ -1,8 +1,9 @@
 package vip.crazykart.model;
 
-import java.util.Date;
-import javax.persistence.*;
 import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
 
 /**
  * @author kangyonggan
@@ -12,11 +13,11 @@ import lombok.Data;
 @Data
 public class Video {
     /**
-     * 主键, 自增
+     * 视频ID
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long videoId;
 
     /**
      * 标题
@@ -27,6 +28,11 @@ public class Video {
      * 描述
      */
     private String summary;
+
+    /**
+     * 分类
+     */
+    private String type;
 
     /**
      * 作者

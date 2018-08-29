@@ -27,4 +27,13 @@ public class DictServiceImpl extends BaseService<Dict> implements DictService {
         return myMapper.selectByExample(example);
     }
 
+    @Override
+    @Log
+    public Dict findDictByDictTypeAndCode(String type, String code) {
+        Dict dict = new Dict();
+        dict.setDictType(type);
+        dict.setDictCode(code);
+        return myMapper.selectOne(dict);
+    }
+
 }

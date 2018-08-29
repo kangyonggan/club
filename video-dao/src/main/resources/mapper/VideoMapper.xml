@@ -5,9 +5,10 @@
         <!--
           WARNING - @mbggenerated
         -->
-        <id column="id" jdbcType="BIGINT" property="id"/>
+        <id column="video_id" jdbcType="BIGINT" property="videoId"/>
         <result column="title" jdbcType="VARCHAR" property="title"/>
         <result column="summary" jdbcType="VARCHAR" property="summary"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
         <result column="user_id" jdbcType="BIGINT" property="userId"/>
         <result column="map_code" jdbcType="VARCHAR" property="mapCode"/>
         <result column="hits" jdbcType="INTEGER" property="hits"/>

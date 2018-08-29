@@ -162,12 +162,14 @@ IF EXISTS tb_video;
 
 CREATE TABLE tb_video
 (
-  id           BIGINT(20) PRIMARY KEY AUTO_INCREMENT NOT NULL
-  COMMENT '主键, 自增',
+  video_id     BIGINT(20) PRIMARY KEY AUTO_INCREMENT NOT NULL
+  COMMENT '视频ID',
   title        VARCHAR(64)                           NOT NULL                    DEFAULT ''
   COMMENT '标题',
   summary      VARCHAR(256)                          NOT NULL                    DEFAULT ''
   COMMENT '描述',
+  type         VARCHAR(64)                           NOT NULL                    DEFAULT ''
+  COMMENT '分类',
   user_id      BIGINT(20)                            NOT NULL
   COMMENT '作者',
   map_code     VARCHAR(64)                           NOT NULL                    DEFAULT ''
@@ -196,6 +198,15 @@ CREATE INDEX ix_map_code
   ON tb_video (map_code);
 
 -- ----------------------------
+--  data for tb_user
+-- ----------------------------
+INSERT INTO tb_user
+(user_id, mobile_no, name)
+VALUES
+  # 密码：11111111
+  (1, '18888888888', '东方骄子-康帝');
+
+-- ----------------------------
 --  data for tb_dict
 -- ----------------------------
 INSERT INTO tb_dict
@@ -207,4 +218,23 @@ VALUES
   ('VIDEO_TYPE', 'bug', 'BUG视频', 3),
   ('VIDEO_TYPE', 'joke', '搞笑视频', 4),
   ('VIDEO_TYPE', 'other', '综合视频', 5);
+
+-- ----------------------------
+--  data for tb_video
+-- ----------------------------
+INSERT INTO tb_video
+(title, summary, type, user_id, map_code, hits, is_top, cover, src, status)
+VALUES
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg',
+   'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'limit', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'game', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'bug', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'joke', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'other', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y'),
+  ('无转最强超级起步教学视频', '正所谓好的开头，是成功的一般，一步先步步先！每局都会有起步，所以练习超级起步是必不可少的', 'teach', 1, 0, 0, 1, 'app/images/4.jpg', 'libs/Dvideo/evn4.mp4', 'Y');
 

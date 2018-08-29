@@ -18,4 +18,12 @@ public interface DictService {
      */
     List<Dict> findDictsByDictType(String dictType);
 
+    /**
+     * 查找字典
+     *
+     * @param type
+     * @param code
+     * @return
+     */
+    Dict findDictByDictTypeAndCode(String type, String code);
 }
