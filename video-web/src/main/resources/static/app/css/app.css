@@ -17,6 +17,7 @@ html, body {
 }
 
 #footer {
+    margin-top: 20px;
     text-align: center;
     font-size: 14px;
     color: #8c8c8c;
@@ -164,22 +165,9 @@ a:hover {
     margin-top: 15px;
 }
 
-.panel-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.video-list {
-    height: 240px;
-}
-
-.video-list li {
-    float: left;
-    margin-left: 10px;
-}
-
-.video-list li a img {
-    height: 200px;
-    border: none;
+#video {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    outline: 2px solid #ccc;
 }

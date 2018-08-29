@@ -20,13 +20,15 @@
 <div class="layout-container">
 <#include "navbar.ftl"/>
     <div id="main" class="content">
-        <ul class="breadcrumbs">
-            <span>您当前的位置：</span>
-            <li>
-                <a href="${ctx}/">${appName}</a>
-            </li>
-        <@block name="breadcrumbs"/>
-        </ul>
+        <#if !breadcrumbs?? || breadcrumbs!='false'>
+            <ul class="breadcrumbs">
+                <span>您当前的位置：</span>
+                <li>
+                    <a href="${ctx}/">${appName}</a>
+                </li>
+                <@block name="breadcrumbs"/>
+            </ul>
+        </#if>
         <div class="main-container">
         <@block name="main"/>
         </div>
